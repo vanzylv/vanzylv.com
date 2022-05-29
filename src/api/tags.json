@@ -1,0 +1,33 @@
+{
+  "dev-tags": [
+    {
+      "category": "javascript",
+      "description": "Javascript",
+      "frameworks": [
+        {
+          "name": "react-native",
+          "description": "React Native"
+        },
+        {
+          "name": "react",
+          "description": "React"
+        },
+        {
+          "name": "angular",
+          "description": "Angular"
+        }
+      ]
+    },
+    {
+      "category": "java",
+      "description": "Java",
+      "frameworks": [
+        {
+          "category": "framework",
+          "name": "spring",
+          "description": "Spring"
+        }
+      ]
+    }
+  ]
+}
