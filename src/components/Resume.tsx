@@ -1,5 +1,6 @@
-import { Container, Divider, Image, Timeline } from '@mantine/core'
-import { BrandGit, Calendar, GitCommit, GitFork } from 'tabler-icons-react'
+import { Container, Divider, Timeline } from '@mantine/core'
+import { BrandGit, GitCommit, GitFork } from 'tabler-icons-react'
+import Employer from "./Employer";
 
 const bnz = require('../assets/bnz.jpg')
 
@@ -15,20 +16,14 @@ const About = () => {
                         color="ocean-blue"
                         title="Bank of New Zealand."
                         bulletSize={30}
-                        bullet={<BrandGit size={22} radius="xl" color="green"></BrandGit>}
+                        bullet={<BrandGit size={22} radius="xl" color="green" />}
                     >
-                        <div style={{ display: 'flex', padding: 10, margin: 10 }}>
-                            <Image src={bnz} style={{ width: 40 }} />
-                            <div style={{ display: 'flex', padding: 5 }}>
-                                <text style={{ paddingLeft: 5 }}>November 2018 - Current day</text>
-                                <Calendar style={{ marginLeft: 5 }} />
-                            </div>
-                        </div>
+                        <Employer />
                     </Timeline.Item>
                     <Timeline.Item
                         title="Hiplee"
                         bulletSize={30}
-                        bullet={<GitCommit size={22} radius="xl"></GitCommit>}
+                        bullet={<GitCommit size={22} radius="xl" />}
                     >
                         <div>May 2018 - October 2018</div>
                     </Timeline.Item>
@@ -36,7 +31,7 @@ const About = () => {
                     <Timeline.Item
                         title="Solnet Solutions"
                         bulletSize={30}
-                        bullet={<GitCommit size={22} radius="xl"></GitCommit>}
+                        bullet={<GitCommit size={22} radius="xl" />}
                     >
                         <div>March 2017 - April 2018</div>
                     </Timeline.Item>
@@ -44,7 +39,7 @@ const About = () => {
                     <Timeline.Item
                         title="BBD Software development"
                         bulletSize={30}
-                        bullet={<GitCommit size={22} radius="xl"></GitCommit>}
+                        bullet={<GitCommit size={22} radius="xl" />}
                     >
                         <div>2010 – 2017</div>
                     </Timeline.Item>
@@ -52,7 +47,7 @@ const About = () => {
                     <Timeline.Item
                         title="Enerweb"
                         bulletSize={30}
-                        bullet={<GitFork size={22} radius="xl"></GitFork>}
+                        bullet={<GitFork size={22} radius="xl" />}
                     >
                         <div>2001 - 2010</div>
                     </Timeline.Item>
