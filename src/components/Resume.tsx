@@ -1,6 +1,7 @@
 import { Container, Divider, Timeline } from '@mantine/core'
 import { BrandGit, GitCommit, GitFork } from 'tabler-icons-react'
 import Employer from "./Employer";
+import ResumeFilter from "./ResumeFilter";
 
 const bnz = require('../assets/bnz.jpg')
 
@@ -9,7 +10,7 @@ const About = () => {
         <Container style={{ padding: 10, marginTop: 10 }}>
             <div>Resume.</div>
             <Divider my="sm" />
-
+            <ResumeFilter/>
             <div style={{ margin: 'auto' }}>
                 <Timeline>
                     <Timeline.Item
