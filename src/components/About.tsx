@@ -1,4 +1,4 @@
-import { Container, Divider } from '@mantine/core'
+import {Container, Divider, Text} from '@mantine/core'
 import { Link } from 'react-router-dom'
 
 const About = () => {
@@ -6,7 +6,7 @@ const About = () => {
         <Container style={{ padding: 10, marginTop: 10 }}>
             <div>Greetings.</div>
             <Divider my="sm" />
-            <text>
+            <Text>
                 I've been a software developer since 2001. I've had the opportunity to work on a
                 wide variety of software projects alongside many talented developers. From the early
                 days where web pages were rendered on the server (the first time), the best browser
@@ -23,7 +23,7 @@ const About = () => {
                 <br />
                 <br />
                 Regards, Vickus van Zyl
-            </text>
+            </Text>
         </Container>
     )
 }

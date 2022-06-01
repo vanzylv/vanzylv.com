@@ -1,0 +1,132 @@
+{
+  "dev-tags": [
+    {
+      "category": "javascript",
+      "description": "Javascript",
+      "frameworks": [
+        {
+          "name": "react-native",
+          "description": "React Native"
+        },
+        {
+          "name": "react",
+          "description": "React"
+        },
+        {
+          "name": "nodejs",
+          "description": "NodeJS"
+        },
+        {
+          "name": "angular",
+          "description": "Angular"
+        },
+        {
+          "name": "jquery",
+          "description": "jQuery"
+        },
+        {
+          "name": "redux",
+          "description": "Redux"
+        }
+      ]
+    },
+    {
+      "category": "java",
+      "description": "Java",
+      "frameworks": [
+        {
+          "name": "spring",
+          "description": "Spring Boot"
+        },
+        {
+          "name": "javaee",
+          "description": "Java EE"
+        },
+        {
+          "name": "liferay",
+          "description": "Liferay"
+        }
+      ]
+    },
+    {
+      "category": "dotnet",
+      "description": ".Net",
+      "frameworks": [
+        {
+          "name": "csharp",
+          "description": "C#"
+        },
+        {
+          "name": "aspdotnet",
+          "description": "ASP.net"
+        },
+        {
+          "name": "winmobile",
+          "description": "Windows Mobile"
+        }
+      ]
+    },
+    {
+      "category": "cloud",
+      "description": "Cloud",
+      "frameworks": [
+        {
+          "name": "s3",
+          "description": "Amazon S3"
+        },
+        {
+          "name": "cloudformation",
+          "description": "AWS CloudFormation"
+        },
+        {
+          "name": "ecs",
+          "description": "Amazon ECS"
+        },
+        {
+          "name": "cognito",
+          "description": "AWS Cognito"
+        },
+        {
+          "name": "amplify",
+          "description": "AWS Amplify"
+        }
+      ]
+    },
+    {
+      "category": "database",
+      "description": "Database",
+      "frameworks": [
+        {
+          "name": "oracle",
+          "description": "Oracle"
+        },
+        {
+          "name": "mysql",
+          "description": "MySQL"
+        },
+        {
+          "name": "mongodb",
+          "description": "MongoDB"
+        }
+      ]
+    },
+    {
+      "category": "misc",
+      "description": "Other",
+      "frameworks": [
+        {
+          "name": "openshift",
+          "description": "OpenShift"
+        },
+        {
+          "name": "kafka",
+          "description": "Kafka"
+        },
+        {
+          "name": "jenkins",
+          "description": "Jenkins Pipeline"
+        }
+      ]
+    }
+  ]
+}
