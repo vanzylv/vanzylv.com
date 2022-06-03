@@ -25,6 +25,10 @@
           "description": "jQuery"
         },
         {
+          "name": "typescript",
+          "description": "TypeScript"
+        },
+        {
           "name": "redux",
           "description": "Redux"
         }
