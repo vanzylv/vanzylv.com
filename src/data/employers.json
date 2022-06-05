@@ -1,77 +1,86 @@
 {
-  "bnz": {
-    "description": "Bank of New Zealand",
-    "dateStart": "2018-11-01",
-    "dateEnd": "Current day",
-    "logo": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gIcSUNDX1BST0ZJTEUAAQEAAAIMbGNtcwIQAABtbnRyUkdCIFhZWiAH3AABABkAAwApADlhY3NwQVBQTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApkZXNjAAAA/AAAAF5jcHJ0AAABXAAAAAt3dHB0AAABaAAAABRia3B0AAABfAAAABRyWFlaAAABkAAAABRnWFlaAAABpAAAABRiWFlaAAABuAAAABRyVFJDAAABzAAAAEBnVFJDAAABzAAAAEBiVFJDAAABzAAAAEBkZXNjAAAAAAAAAANjMgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAEZCAABYWVogAAAAAAAA9tYAAQAAAADTLVhZWiAAAAAAAAADFgAAAzMAAAKkWFlaIAAAAAAAAG+iAAA49QAAA5BYWVogAAAAAAAAYpkAALeFAAAY2lhZWiAAAAAAAAAkoAAAD4QAALbPY3VydgAAAAAAAAAaAAAAywHJA2MFkghrC/YQPxVRGzQh8SmQMhg7kkYFUXdd7WtwegWJsZp8rGm/fdPD6TD////bAEMAAwICAwICAwMDAwQDAwQFCAUFBAQFCgcHBggMCgwMCwoLCw0OEhANDhEOCwsQFhARExQVFRUMDxcYFhQYEhQVFP/bAEMBAwQEBQQFCQUFCRQNCw0UFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFP/CABEIAGQAZAMBIgACEQEDEQH/xAAcAAEAAgIDAQAAAAAAAAAAAAAAAQUEBgIDBwj/xAAaAQEAAwEBAQAAAAAAAAAAAAAAAQIFAwYE/9oADAMBAAIQAxAAAAHwkey82AAAAAACASCACcqtsQWqAAfV/wAy/N9FUz+3vxq+VnkwtO/WuvD1LDX+fDYzg78RzW+yLCj07zmzu2d5zm2rWbbZ+X3r430YsbGcHbkABMBKCZQQAACQAAAAAAAAAAAAAP/EACMQAAICAQMDBQAAAAAAAAAAAAQFAwYCAQcgABExEhUwUGD/2gAIAQEAAQUC+v8APUgssUXxaeWaTFWHKzIskjtfGtO4bdCRAVMkA2PDEAnIaZWYNAKqNOj9hZ6dCjlMpCB518+WWuXGEzSq0GtNcrVW1BOla28Uts39O24ctZor9dY1Y4B8i6UojIsjhh29RthrFhW2O8rQk1ytCsiq1ixppqensNYSrLONU8FX4b//xAAjEQACAgEDAwUAAAAAAAAAAAABAgARAxITIRAgUSIwQEFh/9oACAEDAQE/AfbCkix2Ni0qDKMAPiHMR6saVjNWPNfsysruSgodBC4Xm+IHGrTf1Da4qDTccpt3x8j/xAAmEQACAQMCBAcAAAAAAAAAAAABAgMAERIxUQQQEyEgIjBAQWHw/9oACAECAQE/AfTLqpAJ18Ec4d2XashvRZdL0vDBrJNIGnW5B2v9VAjxxKkjZEfPMRM/bE5XoxEpnbvegFknyZDb9rQhjEnWt5tL+4//xAAwEAACAQMCBAMFCQAAAAAAAAABAwIABBESIQUTQVEUMTIgQ5Gx8RUwQlBgY3HB0f/aAAgBAQAGPwL8wWyUCIMBMT932q1d4kFk8nEQd/47UizMgjfbckS7Z/2ppg3mY6dvZbfMXDM5TZrI30x+hrxD7V61s35k1kA5o3At2lA96IHT8aDm2j1JPkyayI/GjO3tHvgDgyWsyFZ+zrrb9mVctQm4mWT1xnqakuYkue47ZFbnPTf2bd/LDJKt4HRLrKX1qbr9EIietcoj0yFJuZQDNCOZpP4jI7fOn3nEVLEJwbqjDyMRmlcOs7W38Io6nXDNXU/Om8PtJa71kdMyPdA/3RanAZjSJHpTHT9UzqPsjV6c714R9+II2Og5WdqPCuB7gw5fMiCIrj1x3NK4fw+6i6WVw0gEYjH6Chwu9vPCSC5KZnY4JO4pdta8QXBXnvnWT3O3nVw+xcH38vRh0pEkncn9D//EACQQAQACAgIBAwUBAAAAAAAAAAERIQAxQVFhIDBxUIGhsdHw/9oACAEBAAE/Ifp4SgtxASANgw/n2wIlhy9YhKWC6JpoPMbwV7M4oPlSH7uMFOINGSgkul+PTNSTC6AT1+zJ3UirrbSMkx9KRjekZHOGQk6sZGPUOPUhkZQ7S1fjIWYLYVPF84aPbB2CTw4uLMASmjR6Ji+siaQNAwp++VGWFYtTD/qypCVoJMPzHI3ewapMK9OBRRikWOmF6DxeCHUSo3PmaON9ZZyYk33B/cE4Hwal69Ic6IKdc4NLll60s/WCTLTZOy0u/MzkzNBsKeQ5DB7GyxYMI05EtrJyG9rCS5IU5EvUt+xP1/8A/9oADAMBAAIAAwAAABD777777777/wD9/wD/APTa9p3/AMkEfG//APnzj/8A/wC++++++++++++++//EACERAAICAQMFAQAAAAAAAAAAAAERACExIFFhEEBBcYHB/9oACAEDAQE/ENedBMChniAxiZxDOW79QKamVhAJIXMK/QePrjhsaGUNo+YF3LMKhLcwJIIfDhLJq7wOIRBEpa8Pf3MRmX1uX2P/xAAjEQEBAAEEAAYDAAAAAAAAAAABESEAMVFxECAwQEFhgeHx/9oACAECAQE/EPTIMOBndy4/A+SCZUt31lkaFYD2aTopQXPE4hDN+piSxIGJXmHgsLonGVVEA/ukrdcWh13qYCsY3bvWloNlfKcdfvl9x//EACAQAQEBAAICAgMBAAAAAAAAAAERIQBBMVEgYRBQcTD/2gAIAQEAAT8Q/XuAKMAKvHXQbB9vrCb8qDKX18SQ3SpY7Z3OZ9tU9fYoStqIPLNc7ngEFqqA0p5cyJcjIhgQN0gJvxRom6AsRYWD7e+CbkhIcE1c3eeZc7ZSjCOO48/hfN6gDet3rmEflhjSixGfZyEGFlgKqrmS8hpJFaKNj2+jXmgtFFlfApD9I+uOrmEQEC9BgdHwYvQXhupSu2kcsuWE5543/riqhqOutH0mpdukPRxC574MTOJnQg/c6CS4jFbZeLETAeAoC8sVE9AKvc/oro9fXi8UmKhMIVyxC4HLUJUpUPRcM6+IAyAxUswd5eb6S+1XRphnocQYbkRRKTn0VJOPkcLYYM3SffEGeGvRvF8MUaJ4oGpQGrGAs8hAAAA4gcAeqpViZ8nzV/wo7fxX3wU75X28Ve391//Z",
-    "roles": [
-      {
-        "name": "assisted",
-        "description": "Staff Assisted",
-        "endeavour": [
-          {
-            "project": "Application events integration",
-            "description": "Bi-directional application information integration with 3rd party software",
-            "tags": [
-              "spring",
-              "Kafka",
-              "openshift",
-              "oracle"
-            ]
-          },
-          {
-            "project": "Staff Assisted Application Rewrite / Cloud Migration",
-            "description": "New React webapp with Spring boot service from the ground up to replace existing on prem application",
-            "tags": [
-              "react",
-              "spring",
-              "redux",
-              "openshift",
-              "ecs",
-              "oracle",
-              "jenkins"
-            ]
-          },
-          {
-            "project": "Staff Assisted Application Maintenance ",
-            "description": "Development, maintenance, testing of webapp used by staff members in branches across New Zealand",
-            "tags": [
-              "react",
-              "spring",
-              "redux",
-              "openshift",
-              "oracle",
-              "jenkins"
-            ]
-          },
-          {
-            "project": "BNZ Digital Onboarding",
-            "description": "Development, maintenance and cloud migration of webapp for onboarding new customers to the bank.",
-            "tags": [
-              "react",
-              "spring",
-              "redux",
-              "openshift",
-              "oracle",
-              "s3",
-              "jenkins"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "bnzgo",
-        "description": "BNZ Go",
-        "endeavour": [
-          {
-            "project": "Mini App",
-            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            "tags": [
-              "react"
-            ]
-          }
-        ]
-      }
-    ]
-  }
+  "employers": [
+    {
+      "description": "Bank of New Zealand",
+      "dateStart": "2018-11-01",
+      "dateEnd": "Current day",
+      "role": "Senior Developer",
+      "logo": "data:image/jpeg;base64,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",
+      "endeavours": [
+        {
+          "project": "Application events integration",
+          "description": "Bi-directional application information integration with 3rd party software",
+          "tags": [
+            "spring",
+            "Kafka",
+            "openshift",
+            "oracle"
+          ]
+        },
+        {
+          "project": "Staff Assisted Application Rewrite / Cloud Migration",
+          "description": "New React webapp with Spring boot service from the ground up to replace existing on prem application",
+          "tags": [
+            "react",
+            "spring",
+            "redux",
+            "openshift",
+            "ecs",
+            "oracle",
+            "jenkins"
+          ]
+        },
+        {
+          "project": "Staff Assisted Application Maintenance ",
+          "description": "Development, maintenance, testing of webapp used by staff members in branches across New Zealand",
+          "tags": [
+            "react",
+            "spring",
+            "redux",
+            "openshift",
+            "oracle",
+            "jenkins"
+          ]
+        },
+        {
+          "project": "BNZ Digital Onboarding",
+          "description": "Development, maintenance and cloud migration of webapp for onboarding new customers to the bank.",
+          "tags": [
+            "react",
+            "spring",
+            "redux",
+            "openshift",
+            "oracle",
+            "s3",
+            "jenkins"
+          ]
+        },
+        {
+          "project": "BNZGo",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "tags": [
+            "react"
+          ]
+        }
+      ]
+    },
+    {
+      "description": "Hiplee",
+      "dateStart": "2018-05-01",
+      "dateEnd": "2018-11-01",
+      "role": "Senior Developer",
+      "logo": " data:image/jpeg;base64,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",
+      "endeavours": [
+        {
+          "project": "HipLee WebApp",
+          "description": "Building a React / Redux webapp application from the ground, integrated with AWS.",
+          "tags": [
+            "react",
+            "cognito",
+            "amplify"
+          ]
+        }
+      ]
+    }
+  ]
 }

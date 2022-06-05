@@ -29,8 +29,12 @@ const ResumeFilter = (): JSX.Element => {
             <Container fluid style={{ margin: 10 }}>
                 <SegmentedControl
                     fullWidth
+                    size="lg"
                     value={category}
-                    onChange={setCategory}
+                    onChange={(value) => {
+                        setCategory(value)
+                        setSubCategory('all')
+                    }}
                     data={categoryData}
                 />
             </Container>
