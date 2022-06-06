@@ -1,9 +1,10 @@
 import {
     Accordion,
-    Center,
+    Badge,
     Container,
+    Grid,
+    Group,
     Image,
-    SimpleGrid,
     Text,
     useMantineColorScheme,
 } from '@mantine/core'
@@ -14,35 +15,60 @@ function EmployerWidget({ dateStart, dateEnd, role, logo, endeavours }: Employer
     const { colorScheme } = useMantineColorScheme()
 
     return (
-        <>
-            <SimpleGrid
+        <Container
+            style={{
+                padding: 5,
+                marginTop: 20,
+                borderStyle: 'solid',
+                borderRadius: 5,
+                borderWidth: 0.1,
+                borderColor: '#373A40',
+            }}
+        >
+            <Grid
                 sx={(theme) => ({
                     borderRadius: 5,
                     backgroundColor:
                         colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[0],
                 })}
-                cols={2}
-                style={{ padding: 10, margin: 10 }}
+                style={{ padding: 5, margin: 5 }}
             >
-                <div>
-                    <Image src={logo} style={{ width: 40 }} />
-                    {role}
-                </div>
-                <Text style={{ paddingLeft: 5 }}>
-                    {dateStart} - {dateEnd}
-                    <Calendar style={{ marginLeft: 5 }} />
-                </Text>
-            </SimpleGrid>
-            <Container style={{ padding: 10, marginTop: 10 }}>
-                <SimpleGrid cols={1}>
-                    {endeavours.map((item: Endeavour, index) => (
-                        <div key={index}>
-                            {item.project} {item.description}
-                        </div>
-                    ))}
-                </SimpleGrid>
-            </Container>
-        </>
+                <Grid.Col span={6}>
+                    <Group position="left">
+                        <Image radius="md" src={logo} style={{ width: 60 }} />
+                        <Text size="xl">{role}</Text>
+                    </Group>
+                </Grid.Col>
+
+                <Grid.Col span={6}>
+                    <Group position="right">
+                        <Text size="xl">
+                            {dateStart} - {dateEnd}
+                        </Text>
+                        <Calendar />
+                    </Group>
+                </Grid.Col>
+            </Grid>
+            <Accordion style={{ padding: 5 }} iconPosition="right" disableIconRotation multiple>
+                {endeavours.map((item: Endeavour, index) => (
+                    <Accordion.Item label={item.project}>
+                        <div key={index}>{item.description}</div>
+                        <Group position="right" style={{ marginTop: 5, paddingTop: 5 }}>
+                            {item.tags.map((devTag) => {
+                                return (
+                                    <Badge
+                                        variant="gradient"
+                                        gradient={{ from: 'indigo', to: 'cyan' }}
+                                    >
+                                        {devTag}
+                                    </Badge>
+                                )
+                            })}
+                        </Group>
+                    </Accordion.Item>
+                ))}
+            </Accordion>
+        </Container>
     )
 }
 

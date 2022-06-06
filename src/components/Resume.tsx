@@ -1,5 +1,5 @@
 import { Container, Divider, Timeline } from '@mantine/core'
-import { BrandGit, GitCommit, GitFork } from 'tabler-icons-react'
+import { BrandGit, GitCommit, GitFork, H1 } from 'tabler-icons-react'
 import EmployerWidget from './EmployerWidget'
 import ResumeFilter from './ResumeFilter'
 import { EmployerData } from '../interfaces/EmployerInterface'
@@ -13,26 +13,28 @@ const About = () => {
             <Divider my="sm" />
             <ResumeFilter />
             <div style={{ margin: 'auto' }}>
-                <Timeline>
-                    {employerData.employers.map((employer,index) => {
+                <Timeline  styles={{ itemTitle: { fontSize: 30 } }}>
+                    {employerData.employers.map((employer, index) => {
                         return (
-                            <Timeline.Item key={index}
-                                color="ocean-blue"
+                            <Timeline.Item
+                                key={index}
                                 title={employer.description}
+
                                 bulletSize={30}
-                                bullet={<BrandGit size={22} radius="xl"/>}
+                                bullet={<BrandGit size={22} radius="xl" />}
                             >
-                                <EmployerWidget  {...employer} />
+                                <EmployerWidget {...employer} />
                             </Timeline.Item>
                         )
                     })}
 
-                    <Timeline.Item color="ocean-blue"
-
-                                   bulletSize={30}
-                                   bullet={<GitCommit size={22} radius="xl"/>}
-                    >Start</Timeline.Item>
-
+                    <Timeline.Item
+                        color="ocean-blue"
+                        bulletSize={30}
+                        bullet={<GitCommit size={22} radius="xl" />}
+                    >
+                        Start
+                    </Timeline.Item>
                 </Timeline>
             </div>
         </Container>

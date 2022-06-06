@@ -42,8 +42,9 @@ const Main = () => {
     const [opened, setOpened] = useState(false)
     return (
         <Container fluid style={{ margin: 35 }}>
+            <NameTitle />
             <SimpleGrid cols={3}>
-                <NameTitle />
+                <div>&nbsp;</div>
                 <Nav />
                 <Group position="right">
                     <ThemeToggle />
