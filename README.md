@@ -1,1 +1,1 @@
-# Personal - Resume website
+# Personal, resume website
