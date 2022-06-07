@@ -5,7 +5,7 @@ const image = require('../assets/vanzylv.PNG')
 
 function NameTitle() {
     return (
-        <Container style={{ padding: 10, margin: 10, position: 'absolute' }}>
+        <Container style={{ padding: 10, margin: 10 }}>
             <Text size="xl">Vickus van Zyl.</Text>
             <Text style={{ paddingTop: 5, paddingBottom: 5 }} size="sm">
                 Software developer.

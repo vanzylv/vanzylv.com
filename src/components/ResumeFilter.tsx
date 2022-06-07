@@ -1,4 +1,4 @@
-import { Center, Container, SegmentedControl, SegmentedControlItem, Space } from '@mantine/core'
+import { Center, Container, SegmentedControl, SegmentedControlItem } from '@mantine/core'
 import { useState } from 'react'
 import { DevTags } from '../interfaces/DevTagsInterface'
 
@@ -38,8 +38,7 @@ const ResumeFilter = (): JSX.Element => {
                     data={categoryData}
                 />
             </Container>
-            <Space />
-            <Container fluid style={{ margin: 10, minHeight: 25 }}>
+            <Container fluid>
                 {subCategoryData.length > 1 ? (
                     <Center>
                         <SegmentedControl

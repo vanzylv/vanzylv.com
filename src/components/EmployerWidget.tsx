@@ -51,12 +51,13 @@ function EmployerWidget({ dateStart, dateEnd, role, logo, endeavours }: Employer
             </Grid>
             <Accordion style={{ padding: 5 }} iconPosition="right" disableIconRotation multiple>
                 {endeavours.map((item: Endeavour, index) => (
-                    <Accordion.Item label={item.project}>
-                        <div key={index}>{item.description}</div>
+                    <Accordion.Item key={index} label={item.project}>
+                        <div>{item.description}</div>
                         <Group position="right" style={{ marginTop: 5, paddingTop: 5 }}>
-                            {item.tags.map((devTag) => {
+                            {item.tags.map((devTag, _index) => {
                                 return (
                                     <Badge
+                                        key={_index}
                                         variant="gradient"
                                         gradient={{ from: 'indigo', to: 'cyan' }}
                                     >

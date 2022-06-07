@@ -1,21 +1,17 @@
 import {
     ActionIcon,
     Container,
+    Grid,
     Group,
     Image,
     List,
     Popover,
-    SimpleGrid,
     Space,
     useMantineColorScheme,
 } from '@mantine/core'
 
 import { Moon, QuestionMark, Sun } from 'tabler-icons-react'
-import { Route, Routes } from 'react-router-dom'
 import { useState } from 'react'
-import About from './About'
-import Resume from './Resume'
-import Contact from './Contact'
 import Nav from './Nav'
 import NameTitle from './NameTitle'
 
@@ -42,42 +38,43 @@ const Main = () => {
     const [opened, setOpened] = useState(false)
     return (
         <Container fluid style={{ margin: 35 }}>
-            <NameTitle />
-            <SimpleGrid cols={3}>
-                <div>&nbsp;</div>
-                <Nav />
-                <Group position="right">
-                    <ThemeToggle />
+            <Grid gutter="sm">
+                <Grid.Col span={3}>
+                    <NameTitle />
+                </Grid.Col>
 
-                    <Popover
-                        opened={opened}
-                        onClose={() => setOpened(false)}
-                        target={
-                            <ActionIcon onClick={() => setOpened((o) => !o)}>
-                                <QuestionMark />
-                            </ActionIcon>
-                        }
-                        position="bottom"
-                        placement="end"
-                    >
-                        <Container>Developed and deployed on</Container>
-                        <Space h={'xs'} />
+                <Grid.Col span={6}>
+                    <Nav />
+                </Grid.Col>
 
-                        <div style={{ display: 'flex' }}>
-                            <List>
-                                <List.Item icon={<Image src={s3} />}>Aws S3</List.Item>
-                                <List.Item icon={<Image src={dynamodb} />}>DynamoDB</List.Item>
-                            </List>
-                        </div>
-                    </Popover>
-                </Group>
-            </SimpleGrid>
+                <Grid.Col span={3}>
+                    <Group position="right">
+                        <ThemeToggle />
 
-            <Routes>
-                <Route element={<About />} path="/" />
-                <Route element={<Resume />} path="/resume" />
-                <Route element={<Contact />} path="/contact" />
-            </Routes>
+                        <Popover
+                            opened={opened}
+                            onClose={() => setOpened(false)}
+                            target={
+                                <ActionIcon onClick={() => setOpened((o) => !o)}>
+                                    <QuestionMark />
+                                </ActionIcon>
+                            }
+                            position="bottom"
+                            placement="end"
+                        >
+                            <Container>Developed and deployed on</Container>
+                            <Space h={'xs'} />
+
+                            <div style={{ display: 'flex' }}>
+                                <List>
+                                    <List.Item icon={<Image src={s3} />}>Aws S3</List.Item>
+                                    <List.Item icon={<Image src={dynamodb} />}>DynamoDB</List.Item>
+                                </List>
+                            </div>
+                        </Popover>
+                    </Group>
+                </Grid.Col>
+            </Grid>
         </Container>
     )
 }
