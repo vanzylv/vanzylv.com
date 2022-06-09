@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core'
 
 import Main from './components/Main'
-import { BrowserRouter as Router } from 'react-router-dom'
 
 function App() {
     const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
@@ -16,9 +15,7 @@ function App() {
                 withGlobalStyles
                 withNormalizeCSS
             >
-                <Router>
-                    <Main />
-                </Router>
+                <Main />
             </MantineProvider>
         </ColorSchemeProvider>
     )
