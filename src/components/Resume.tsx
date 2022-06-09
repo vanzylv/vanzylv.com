@@ -11,15 +11,15 @@ const About = () => {
     const [trans, setTrans] = useState(false)
 
     return (
-        <Transition
-            onExit={() => setTrans(true)}
-            mounted={trans}
-            transition="pop"
-            duration={150}
-            timingFunction="ease"
-        >
-            {(styles) => (
-                <Stack style={styles}>
+        // <Transition
+        //     onExit={() => setTrans(true)}
+        //     mounted={trans}
+        //     transition="pop"
+        //     duration={150}
+        //     timingFunction="ease"
+        // >
+        //     {(styles) => (
+                <Stack>
                     <ResumeFilter />
                     <Timeline styles={{ itemTitle: { fontSize: 30 } }}>
                         {employerData.employers.map((employer, index) => {
@@ -44,8 +44,8 @@ const About = () => {
                         </Timeline.Item>
                     </Timeline>
                 </Stack>
-            )}
-        </Transition>
+        //     )}
+        // </Transition>
     )
 }
 

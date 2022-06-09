@@ -6,15 +6,15 @@ const About = () => {
     const [trans, setTrans] = useState(false)
 
     return (
-        <Transition
-            onExit={() => setTrans(true)}
-            mounted={trans}
-            transition="pop"
-            duration={150}
-            timingFunction="ease"
-        >
-            {(styles) => (
-                <Container style={styles}>
+        // <Transition
+        //     onExit={() => setTrans(true)}
+        //     mounted={trans}
+        //     transition="pop"
+        //     duration={150}
+        //     timingFunction="ease"
+        // >
+        //     {(styles) => (
+                <Container>
                     <Text size="xl">Greetings.</Text>
                     <br />
                     <Text>
@@ -37,8 +37,8 @@ const About = () => {
                         Regards, Vickus van Zyl
                     </Text>
                 </Container>
-            )}
-        </Transition>
+        //     )}
+        // </Transition>
     )
 }
 

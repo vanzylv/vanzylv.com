@@ -6,15 +6,15 @@ const About = () => {
     const [trans, setTrans] = useState(false)
 
     return (
-        <Transition
-            onExit={() => setTrans(true)}
-            mounted={trans}
-            transition="pop"
-            duration={200}
-            timingFunction="ease"
-        >
-            {(styles) => (
-                <Stack style={styles}>
+        // <Transition
+        //     onExit={() => setTrans(true)}
+        //     mounted={trans}
+        //     transition="pop"
+        //     duration={200}
+        //     timingFunction="ease"
+        // >
+        //     {(styles) => (
+                <Stack>
                     <div style={{ display: 'flex' }}>
                         <List>
                             <List.Item icon={<BrandGithub />}>
@@ -32,8 +32,8 @@ const About = () => {
                         </List>
                     </div>
                 </Stack>
-            )}
-        </Transition>
+        //     )}
+        // </Transition>
     )
 }
 
