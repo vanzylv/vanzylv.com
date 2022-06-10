@@ -1,13 +1,12 @@
-import { SimpleGrid, Tabs } from '@mantine/core'
+import { Container, Tabs } from '@mantine/core'
 import About from './About'
 import Resume from './Resume'
 import Contact from './Contact'
 
 function Nav() {
-
     return (
-        <SimpleGrid>
-            <Tabs>
+        <Container>
+            <Tabs grow>
                 <Tabs.Tab tabKey="/" color="pink" label="About">
                     <About />
                 </Tabs.Tab>
@@ -18,7 +17,7 @@ function Nav() {
                     <Contact />
                 </Tabs.Tab>
             </Tabs>
-        </SimpleGrid>
+        </Container>
     )
 }
 

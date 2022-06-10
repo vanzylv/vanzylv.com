@@ -12,7 +12,7 @@
           "description": "Bi-directional application information integration with 3rd party software",
           "tags": [
             "spring",
-            "Kafka",
+            "kafka",
             "openshift",
             "oracle"
           ]

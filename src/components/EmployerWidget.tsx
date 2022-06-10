@@ -1,18 +1,38 @@
 import {
-    Accordion,
     Badge,
     Container,
+    Divider,
     Grid,
     Group,
     Image,
+    Indicator,
+    Paper,
+    Stack,
     Text,
     useMantineColorScheme,
 } from '@mantine/core'
 import { Calendar } from 'tabler-icons-react'
 import { Employer, Endeavour } from '../interfaces/EmployerInterface'
+import { DevTag, DevTags } from '../interfaces/DevTagsInterface'
 
-function EmployerWidget({ dateStart, dateEnd, role, logo, endeavours }: Employer) {
+const tagData: DevTags = require('../data/tags.json')
+
+interface CategoryFilter extends Employer {
+    category: string
+    subCategory: string
+}
+
+function EmployerWidget({
+    dateStart,
+    dateEnd,
+    role,
+    logo,
+    endeavours,
+    category,
+    subCategory,
+}: CategoryFilter) {
     const { colorScheme } = useMantineColorScheme()
+    const devTagHit: DevTag = tagData.tags.find((tag) => tag.category === category)!
 
     return (
         <Container
@@ -49,26 +69,49 @@ function EmployerWidget({ dateStart, dateEnd, role, logo, endeavours }: Employer
                     </Group>
                 </Grid.Col>
             </Grid>
-            <Accordion style={{ padding: 5 }} iconPosition="right" disableIconRotation multiple>
+            <Container style={{ padding: 5 }}>
                 {endeavours.map((item: Endeavour, index) => (
-                    <Accordion.Item key={index} label={item.project}>
-                        <div>{item.description}</div>
+                    <Stack key={index}>
+                        <Paper>
+                            <Stack>
+                                <b>{item.project}</b>
+                                {item.description}
+                            </Stack>
+                        </Paper>
                         <Group position="right" style={{ marginTop: 5, paddingTop: 5 }}>
                             {item.tags.map((devTag, _index) => {
-                                return (
-                                    <Badge
-                                        key={_index}
-                                        variant="gradient"
-                                        gradient={{ from: 'indigo', to: 'cyan' }}
-                                    >
+                                let hit =
+                                    devTagHit &&
+                                    devTagHit.frameworks.some((test) => test.name === devTag)
+
+                                if (subCategory !== 'all') {
+                                    hit = devTag === subCategory
+                                }
+
+                                //console.log(hit)
+
+                                return hit ? (
+                                    <Indicator color="green">
+                                        <Badge
+                                            variant="outline"
+                                            size="lg"
+                                            color={'red'}
+                                            key={_index}
+                                        >
+                                            {devTag}
+                                        </Badge>
+                                    </Indicator>
+                                ) : (
+                                    <Badge color={'blue'} key={_index}>
                                         {devTag}
                                     </Badge>
                                 )
                             })}
                         </Group>
-                    </Accordion.Item>
+                        <Divider style={{ margin: 10 }} />
+                    </Stack>
                 ))}
-            </Accordion>
+            </Container>
         </Container>
     )
 }

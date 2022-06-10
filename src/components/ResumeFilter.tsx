@@ -4,10 +4,19 @@ import { DevTags } from '../interfaces/DevTagsInterface'
 
 const devTags: DevTags = require('../data/tags.json')
 
-const ResumeFilter = (): JSX.Element => {
-    const [category, setCategory] = useState('all')
-    const [subCategory, setSubCategory] = useState('all')
+interface Props {
+    category: string
+    setCategory: Function
+    subCategory: string
+    setSubCategory: Function
+}
 
+const ResumeFilter = ({
+    category,
+    setCategory,
+    subCategory,
+    setSubCategory,
+}: Props): JSX.Element => {
     let categoryData: SegmentedControlItem[] = [{ value: 'all', label: 'All' }]
     let subCategoryData: SegmentedControlItem[] = []
 
@@ -43,7 +52,7 @@ const ResumeFilter = (): JSX.Element => {
                     <Center>
                         <SegmentedControl
                             value={subCategory}
-                            onChange={setSubCategory}
+                            onChange={(value) => setSubCategory(value)}
                             data={subCategoryData}
                         />
                     </Center>

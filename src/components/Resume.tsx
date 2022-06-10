@@ -1,4 +1,4 @@
-import { Stack, Timeline, Transition } from '@mantine/core'
+import { Stack, Timeline } from '@mantine/core'
 import { BrandGit, GitCommit } from 'tabler-icons-react'
 import EmployerWidget from './EmployerWidget'
 import ResumeFilter from './ResumeFilter'
@@ -8,44 +8,40 @@ import { useState } from 'react'
 const employerData: EmployerData = require('../data/employers.json')
 
 const About = () => {
-    const [trans, setTrans] = useState(false)
+    const [category, setCategory] = useState('all')
+    const [subCategory, setSubCategory] = useState('all')
 
     return (
-        // <Transition
-        //     onExit={() => setTrans(true)}
-        //     mounted={trans}
-        //     transition="pop"
-        //     duration={150}
-        //     timingFunction="ease"
-        // >
-        //     {(styles) => (
-                <Stack>
-                    <ResumeFilter />
-                    <Timeline styles={{ itemTitle: { fontSize: 30 } }}>
-                        {employerData.employers.map((employer, index) => {
-                            return (
-                                <Timeline.Item
-                                    key={index}
-                                    title={employer.description}
-                                    bulletSize={30}
-                                    bullet={<BrandGit size={22} radius="xl" />}
-                                >
-                                    <EmployerWidget {...employer} />
-                                </Timeline.Item>
-                            )
-                        })}
-
+        <Stack>
+            <ResumeFilter
+                category={category}
+                setCategory={setCategory}
+                subCategory={subCategory}
+                setSubCategory={setSubCategory}
+            />
+            <Timeline styles={{ itemTitle: { fontSize: 30 } }}>
+                {employerData.employers.map((employer, index) => {
+                    return (
                         <Timeline.Item
-                            color="ocean-blue"
+                            key={index}
+                            title={employer.description}
                             bulletSize={30}
-                            bullet={<GitCommit size={22} radius="xl" />}
+                            bullet={<BrandGit size={22} radius="xl" />}
                         >
-                            Start
+                            <EmployerWidget {...employer} category={category} subCategory={subCategory} />
                         </Timeline.Item>
-                    </Timeline>
-                </Stack>
-        //     )}
-        // </Transition>
+                    )
+                })}
+
+                <Timeline.Item
+                    color="ocean-blue"
+                    bulletSize={30}
+                    bullet={<GitCommit size={22} radius="xl" />}
+                >
+                    Start
+                </Timeline.Item>
+            </Timeline>
+        </Stack>
     )
 }
 
