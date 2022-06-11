@@ -124,7 +124,7 @@
         },
         {
           "name": "jenkins",
-          "description": "Jenkins Pipeline"
+          "description": "Jenkins"
         }
       ]
     }

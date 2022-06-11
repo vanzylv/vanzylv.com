@@ -28,7 +28,7 @@ const About = () => {
                             bulletSize={30}
                             bullet={<BrandGit size={22} radius="xl" />}
                         >
-                            <EmployerWidget {...employer} category={category} subCategory={subCategory} />
+                            <EmployerWidget {...employer} category={category} setSubCategory={setSubCategory} subCategory={subCategory} />
                         </Timeline.Item>
                     )
                 })}

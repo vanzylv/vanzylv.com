@@ -20,6 +20,7 @@ const tagData: DevTags = require('../data/tags.json')
 interface CategoryFilter extends Employer {
     category: string
     subCategory: string
+    setSubCategory: Function
 }
 
 function EmployerWidget({
@@ -30,6 +31,7 @@ function EmployerWidget({
     endeavours,
     category,
     subCategory,
+    setSubCategory,
 }: CategoryFilter) {
     const { colorScheme } = useMantineColorScheme()
     const devTagHit: DevTag = tagData.tags.find((tag) => tag.category === category)!
@@ -88,8 +90,6 @@ function EmployerWidget({
                                     hit = devTag === subCategory
                                 }
 
-                                //console.log(hit)
-
                                 return hit ? (
                                     <Indicator color="green">
                                         <Badge
@@ -102,7 +102,12 @@ function EmployerWidget({
                                         </Badge>
                                     </Indicator>
                                 ) : (
-                                    <Badge color={'blue'} key={_index}>
+                                    <Badge
+                                        onClick={() => setSubCategory(devTag)}
+                                        style={{ cursor: 'hand' }}
+                                        color={'blue'}
+                                        key={_index}
+                                    >
                                         {devTag}
                                     </Badge>
                                 )
