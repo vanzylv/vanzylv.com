@@ -2,25 +2,15 @@ import { Stack, Timeline } from '@mantine/core'
 import { BrandGit, GitCommit } from 'tabler-icons-react'
 import EmployerWidget from './EmployerWidget'
 import ResumeFilter from './ResumeFilter'
-import { EmployerData } from '../interfaces/EmployerInterface'
-import { useState } from 'react'
+import { employerData } from '../data/employerData'
 
-const employerData: EmployerData = require('../data/employers.json')
-
-const About = () => {
-    const [category, setCategory] = useState('all')
-    const [subCategory, setSubCategory] = useState('all')
+const Resume = () => {
 
     return (
         <Stack>
-            <ResumeFilter
-                category={category}
-                setCategory={setCategory}
-                subCategory={subCategory}
-                setSubCategory={setSubCategory}
-            />
+            <ResumeFilter/>
             <Timeline styles={{ itemTitle: { fontSize: 30 } }}>
-                {employerData.employers.map((employer, index) => {
+                {employerData.map((employer, index) => {
                     return (
                         <Timeline.Item
                             key={index}
@@ -28,7 +18,9 @@ const About = () => {
                             bulletSize={30}
                             bullet={<BrandGit size={22} radius="xl" />}
                         >
-                            <EmployerWidget {...employer} category={category} setSubCategory={setSubCategory} subCategory={subCategory} />
+                            <EmployerWidget
+                                {...employer}
+                            />
                         </Timeline.Item>
                     )
                 })}
@@ -45,4 +37,4 @@ const About = () => {
     )
 }
 
-export default About
+export default Resume

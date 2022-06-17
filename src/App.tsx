@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core'
 
 import Main from './components/Main'
+import { RecoilRoot } from 'recoil'
 
 function App() {
     const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
@@ -11,11 +12,13 @@ function App() {
     return (
         <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
             <MantineProvider
-                theme={{ colorScheme, fontFamily: 'Sriracha,sans-serif' }}
+                theme={{ colorScheme, fontFamily: "font-family: 'Rubik', sans-serif;" }}
                 withGlobalStyles
                 withNormalizeCSS
             >
-                <Main />
+                <RecoilRoot>
+                    <Main />
+                </RecoilRoot>
             </MantineProvider>
         </ColorSchemeProvider>
     )

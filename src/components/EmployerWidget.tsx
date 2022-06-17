@@ -13,28 +13,19 @@ import {
 } from '@mantine/core'
 import { Calendar } from 'tabler-icons-react'
 import { Employer, Endeavour } from '../interfaces/EmployerInterface'
-import { DevTag, DevTags } from '../interfaces/DevTagsInterface'
+import { DevTag } from '../interfaces/DevTagsInterface'
 
-const tagData: DevTags = require('../data/tags.json')
+import { devTags } from '../data/tags'
+import { useRecoilState, useRecoilValue } from 'recoil'
+import { resumeCategory, resumeSubCategory } from '../state/atoms'
 
-interface CategoryFilter extends Employer {
-    category: string
-    subCategory: string
-    setSubCategory: Function
-}
-
-function EmployerWidget({
-    dateStart,
-    dateEnd,
-    role,
-    logo,
-    endeavours,
-    category,
-    subCategory,
-    setSubCategory,
-}: CategoryFilter) {
+function EmployerWidget({ dateStart, dateEnd, role, logo, endeavours }: Employer) {
     const { colorScheme } = useMantineColorScheme()
-    const devTagHit: DevTag = tagData.tags.find((tag) => tag.category === category)!
+
+    const category = useRecoilValue(resumeCategory)
+    const [subCategory, setSubCategory] = useRecoilState(resumeSubCategory)
+
+    const devTagHit: DevTag = devTags.find((tag) => tag.category === category)!
 
     return (
         <Container
@@ -91,20 +82,15 @@ function EmployerWidget({
                                 }
 
                                 return hit ? (
-                                    <Indicator color="green">
-                                        <Badge
-                                            variant="outline"
-                                            size="lg"
-                                            color={'red'}
-                                            key={_index}
-                                        >
+                                    <Indicator key={_index} color="green">
+                                        <Badge variant="outline" size="lg" color={'red'}>
                                             {devTag}
                                         </Badge>
                                     </Indicator>
                                 ) : (
                                     <Badge
                                         onClick={() => setSubCategory(devTag)}
-                                        style={{ cursor: 'hand' }}
+                                        style={{ cursor: 'pointer' }}
                                         color={'blue'}
                                         key={_index}
                                     >

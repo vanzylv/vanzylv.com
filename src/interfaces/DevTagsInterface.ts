@@ -8,8 +8,3 @@ export interface DevTag {
     description: string
     frameworks: Framework[]
 }
-
-export interface DevTags {
-    tags: DevTag[]
-}
-

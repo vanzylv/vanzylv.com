@@ -12,7 +12,3 @@ export interface Employer {
     role: string
     endeavours: Endeavour[]
 }
-
-export interface EmployerData {
-    employers: Employer[]
-}

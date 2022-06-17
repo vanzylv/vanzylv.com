@@ -1,30 +1,23 @@
 import { Center, Container, SegmentedControl, SegmentedControlItem } from '@mantine/core'
-import { useState } from 'react'
-import { DevTags } from '../interfaces/DevTagsInterface'
 
-const devTags: DevTags = require('../data/tags.json')
+import {useRecoilState, useRecoilValue} from "recoil";
+import {devTagsStaticState, resumeCategory, resumeSubCategory} from "../state/atoms";
+import {DevTag} from "../interfaces/DevTagsInterface";
 
-interface Props {
-    category: string
-    setCategory: Function
-    subCategory: string
-    setSubCategory: Function
-}
+const ResumeFilter = (): JSX.Element => {
 
-const ResumeFilter = ({
-    category,
-    setCategory,
-    subCategory,
-    setSubCategory,
-}: Props): JSX.Element => {
+    const devTags:DevTag[] = useRecoilValue(devTagsStaticState);
+    const [category, setCategory] = useRecoilState(resumeCategory);
+    const [subCategory, setSubCategory] = useRecoilState(resumeSubCategory);
+
     let categoryData: SegmentedControlItem[] = [{ value: 'all', label: 'All' }]
     let subCategoryData: SegmentedControlItem[] = []
 
-    devTags.tags.forEach(({ category, description }) => {
+    devTags.forEach(({ category, description }) => {
         return categoryData.push({ label: description, value: category })
     })
 
-    const subCategories = devTags.tags.filter((item) => item.category === category)
+    const subCategories = devTags.filter((item) => item.category === category)
 
     if (subCategories.length > 0) {
         subCategoryData.push({ value: 'all', label: 'All' })
