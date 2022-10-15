@@ -1,4 +1,8 @@
-import { Text } from '@mantine/core'
+import { Text, Image } from '@mantine/core'
+// @ts-ignore
+import saaImg from '../assets/aws-certified-solutions-architect-associate.png'
+// @ts-ignore
+import cpImg from '../assets/aws-certified-cloud-practitioner.png'
 
 const About = () => {
     return (
@@ -24,25 +28,12 @@ const About = () => {
                 <br />
                 Regards, Vickus van Zyl
             </Text>
+            <br/>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                <div
-                    data-iframe-width="150"
-                    data-iframe-height="270"
-                    data-share-badge-id="fc7bf40e-bd4a-4ba7-b8d2-487b502b1cb0"
-                    data-share-badge-host="https://www.credly.com"
-                >
-                    &nbsp;
-                </div>
-                &nbsp; &nbsp;
-                <div
-                    data-iframe-width="150"
-                    data-iframe-height="270"
-                    data-share-badge-id="db5f3a87-8f77-4a23-89c5-d22ffd423577"
-                    data-share-badge-host="https://www.credly.com"
-                >
-                    &nbsp;
-                </div>
+                <Image height={120} width={120} radius="md" src={saaImg} />
+                <Image height={120} width={120} radius="md" src={cpImg} />
             </div>
+
         </div>
     )
 }
