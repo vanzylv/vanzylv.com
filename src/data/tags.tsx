@@ -14,6 +14,8 @@ export const ASP = 'aspdotnet'
 export const WINMOBILE = 'winmobile'
 export const CSHARP = 'csharp'
 export const S3 = 's3'
+export const TRANSCRIBE = 'transcribe'
+export const LAMBDA = 'lambda'
 export const CLOUDFORMATION = 'cloudformation'
 export const ECS = 'ecs'
 export const COGNITO = 'cognito'
@@ -121,6 +123,14 @@ export const devTags: DevTag[] = [
             {
                 name: AMPLIFY,
                 description: 'AWS Amplify',
+            },
+            {
+                name: TRANSCRIBE,
+                description: 'AWS Transcribe',
+            },
+            {
+                name: LAMBDA,
+                description: 'Lambda',
             },
         ],
     },

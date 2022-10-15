@@ -31,7 +31,7 @@ const ResumeFilter = (): JSX.Element => {
             <Container fluid style={{ margin: 10 }}>
                 <SegmentedControl
                     fullWidth
-                    size="lg"
+                    size="sm"
                     value={category}
                     onChange={(value) => {
                         setCategory(value)
