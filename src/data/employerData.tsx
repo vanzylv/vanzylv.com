@@ -38,8 +38,8 @@ export const employerData: Employer[] = [
         endeavours: [
             {
                 project: 'Transcribe',
-                description: 'React App integrated with AWS Transcribe',
-                tags: [SPRING, KAFKA, OPENSHIFT, ORACLE, S3, TRANSCRIBE, LAMBDA],
+                description: 'React UI exposing AWS Transcribe functionality',
+                tags: [S3, TRANSCRIBE, LAMBDA],
             },
             {
                 project: 'Application events integration',
