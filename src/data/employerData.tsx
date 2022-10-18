@@ -1,7 +1,7 @@
 import { Employer } from '../interfaces/EmployerInterface'
 import {
     AMPLIFY,
-    ANGULAR,
+    ANGULAR, ASP,
     CLOUDFORMATION,
     COGNITO,
     CSHARP,
@@ -25,7 +25,7 @@ import {
     REDUX,
     S3,
     SPRING,
-    TRANSCRIBE,
+    TRANSCRIBE, WINMOBILE,
 } from './tags'
 
 export const employerData: Employer[] = [
@@ -155,13 +155,13 @@ export const employerData: Employer[] = [
                 project: 'Vodacom - Instant upgrades.',
                 description:
                     'Design and development of a C# based tablet application that allows users to upgrade via their Windows tablets.',
-                tags: [CSHARP, JAVAEE],
+                tags: [ASP, CSHARP, JAVAEE],
             },
             {
                 project: 'Vodacom - Windows mobile application.',
                 description:
                     'Team lead, development of a C# windows phone application to allow customers the same functionality available through Vodacom’s self service portal.',
-                tags: [CSHARP, JAVAEE],
+                tags: [WINMOBILE, CSHARP, JAVAEE],
             },
         ],
     },
