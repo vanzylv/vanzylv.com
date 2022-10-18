@@ -39,7 +39,7 @@ export const employerData: Employer[] = [
             {
                 project: 'Transcribe',
                 description: 'React UI exposing AWS Transcribe functionality',
-                tags: [S3, TRANSCRIBE, LAMBDA],
+                tags: [REACT, S3, TRANSCRIBE, LAMBDA],
             },
             {
                 project: 'Application events integration',
